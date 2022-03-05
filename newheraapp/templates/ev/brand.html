@@ -1,0 +1,118 @@
+{%extends 'base.html'%} {%load static%} {%load crispy_forms_tags%}
+{%block header%}    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="header">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo">
+                                    <a href="{%url 'anasayfa'%}"><img src="{% static 'ev/assets/images/heralogo.jpeg'%}" alt="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <div class="menu-area">
+                            <div class="limit-box">
+                                <nav class="main-menu">
+                                    <ul class="menu-area-main">
+                                    <li class="active">
+                                        <a href="{%url 'anasayfa'%}">Anasayfa</a> </li>
+                                    <li><a href="{%url 'special'%}">Nakliye</a></li>
+                                    <li><a href="{%url 'brand'%}">Ürünler</a> </li>
+                                    <li><a href="{%url 'contact'%}">Bize Ulaşın</a></li>
+                                    <li><a href="{%url 'about'%}">Biz Kimiz</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 offset-md-6">
+                        <div class="location_icon_bottum">
+                            <ul>
+                                <li><img src="{% static 'ev/assets/icon/call.png'%}"/>05532623798</li>
+                                <li><img src="{% static 'ev/assets/icon/email.png'%}"/>hakankaplanlar35@gmail.com</li>
+                                <li><img src="{% static 'ev/assets/icon/loc.png'%}"/>İzmir</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header inner -->
+    </header>
+{%endblock%}
+{%block slider_section%}
+<br><br><br><br>
+<center>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h1><strong>ÜRÜNLERE GÖZ AT</strong></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+<center>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 co-sm-l2">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" ctype="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><h4>ÜRÜNLERİM</h4></button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="row">
+                                    <div class=" col-md-12 ">
+                                        <a class="read-more" href="{%url 'sosis'%}">PRES SOSİS-PİKNİK MANGAL KÖMÜRÜ</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class=" col-md-12 ">
+                                        <a class="read-more" href="{%url 'mese'%}">DOĞAL MEŞE KÖMÜRÜ</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class=" col-md-12 ">
+                                        <a class="read-more" href="{%url 'briket'%}">BRİKET TOZSUZ MANGAL KÖMÜRÜ</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class=" col-md-12 ">
+                                        <a class="read-more" href="{%url 'nargile'%}">NARGİLE KÖMÜRÜ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+<br><br>
+{%endblock%}
+<!--end slider-section-->
+<!-- brand -->
+{%block brand%} {%endblock%}
+<!-- end brand -->
+<!-- about -->
+{%block about%} {%endblock%}
+<!-- end about -->
+<!-- clients -->
+{% block clients %} {%endblock%}
+<!-- end clients -->
+<!-- contact -->
+{%block contact%} {%endblock%}
+<!-- end contact -->
+<!-- footer -->
+{%block footer%} {%endblock%}
+<!-- end footer -->
