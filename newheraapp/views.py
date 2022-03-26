@@ -4,28 +4,30 @@ from newheraapp.models import NargileKomuru, Photo,BriketKomur,PresSosisMangalKu
 from django.core.paginator import Paginator
 
 def anasayfa(request):
-    foto = Photo.objects.all()
-
-    sayfa = request.GET.get('sayfa')
-    paginator = Paginator(foto, 6) # Sayfalama Kısmı
-
-
-    if request.method == 'POST':
-        form = MessageForm(request.POST)
-        if form.is_valid():
-            form.save()
-            form = MessageForm()
-    else:
-        form = MessageForm()
+    try:
     
-    context= {
-        'form':form,
-        'foto':paginator.get_page(sayfa),
-    }
-    return render(request, "ev/anasayfa.html", context)
+        foto = Photo.objects.all()
+        sayfa = request.GET.get('sayfa')
+        paginator = Paginator(foto, 6) # Sayfalama Kısmı
 
-#def contak(request):
-#    return render(request, "ev/contak.html")
+
+        if request.method == 'POST':
+            form = MessageForm(request.POST)
+            if form.is_valid():
+                form.save()
+                form = MessageForm()
+        else:
+            form = MessageForm()
+        
+        context= {
+            'form':form,
+            'foto':paginator.get_page(sayfa),
+        }
+        return render(request, "ev/anasayfa.html", context)
+    except Exception as e:
+        print(e)
+        return str(e)
+
 
 def brand(request):
 
