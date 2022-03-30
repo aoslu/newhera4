@@ -78,11 +78,15 @@ WSGI_APPLICATION = 'newhera4.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+DATABASES={
+   'default':{
+      'ENGINE':'django.db.backends.postgresql_psycopg2',
+      'NAME': 'newhera4',
+      'USER': 'hakanhera',
+      'PASSWORD': 'salttt777Aa',
+      'HOST': 'localhost',
+      'PORT': '5432',
+   }
 }
 
 
@@ -126,10 +130,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-MEDIA_URL= '/images/'
+MEDIA_URL = '/images/'
 
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
 MEDIA_ROOT= os.path.join(BASE_DIR, 'static/images')
 
